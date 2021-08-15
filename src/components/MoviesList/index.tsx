@@ -15,31 +15,6 @@ const MoviesList = () => {
   const [selectedPage, setSelectedPage] = useState(1)
   const [selectedGenres, setSelectedGenres] = useState('')
 
-  const handleData = async (page?: number, genres?: string) => {
-    let res
-    if (!page) page = selectedPage
-
-    try {
-      setLoading(true)
-
-      if (genres) {
-        res = await fetchMoviesWithFilters(page, genres)
-      } else {
-        res = await fetchPopularMovies(page)
-      }
-
-      if (!res.ok) throw new Error('Error while loading movies')
-
-      const data = await res.json()
-      setLoading(false)
-      setMovies(data.results)
-      setTotalPages(data.total_pages)
-    } catch (error) {
-      setLoading(false)
-      console.log(error)
-    }
-  }
-
   useEffect(() => {
     if (!router.isReady) return
     const page = router.query.page ? Number(router.query.page) : 1
@@ -74,6 +49,31 @@ const MoviesList = () => {
         }
       }
     )
+  }
+
+  const handleData = async (page?: number, genres?: string) => {
+    let res
+    if (!page) page = selectedPage
+
+    try {
+      setLoading(true)
+
+      if (genres) {
+        res = await fetchMoviesWithFilters(page, genres)
+      } else {
+        res = await fetchPopularMovies(page)
+      }
+
+      if (!res.ok) throw new Error('Error while loading movies')
+
+      const data = await res.json()
+      setLoading(false)
+      setMovies(data.results)
+      setTotalPages(data.total_pages)
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
+    }
   }
 
   const formatDate = (date: string) =>
