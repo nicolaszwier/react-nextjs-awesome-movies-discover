@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { apiImageUrl, apiKey, apiUrl } from 'config/config'
 import { Movie } from 'models/Movie'
 import { useEffect, useState } from 'react'
@@ -43,23 +44,25 @@ const MoviesList = () => {
       <S.MoviesWrapper>
         <S.MoviesListTitle>Popular movies</S.MoviesListTitle>
         <S.MoviesList>
-          {movies.map((el: Movie) => (
-            <S.MovieCard key={el.id}>
-              <S.VoteAverage title="Votes average">
-                {el.vote_average}
-              </S.VoteAverage>
-              <S.MovieImageWrapper>
-                <Image
-                  src={`${apiImageUrl}/w220_and_h330_face${el.poster_path}`}
-                  height="330"
-                  width="220"
-                ></Image>
-              </S.MovieImageWrapper>
-              <S.MovieCardTitle>{el.title}</S.MovieCardTitle>
-              <S.MovieCardSubTitle>
-                {formatDate(el.release_date)}
-              </S.MovieCardSubTitle>
-            </S.MovieCard>
+          {movies.map((movie: Movie) => (
+            <Link key={movie.id} href={`/movie/${movie.id}`} passHref>
+              <S.MovieCard>
+                <S.VoteAverage title="Votes average">
+                  {movie.vote_average}
+                </S.VoteAverage>
+                <S.MovieImageWrapper>
+                  <Image
+                    src={`${apiImageUrl}/w220_and_h330_face${movie.poster_path}`}
+                    height="330"
+                    width="220"
+                  ></Image>
+                </S.MovieImageWrapper>
+                <S.MovieCardTitle>{movie.title}</S.MovieCardTitle>
+                <S.MovieCardSubTitle>
+                  {formatDate(movie.release_date)}
+                </S.MovieCardSubTitle>
+              </S.MovieCard>
+            </Link>
           ))}
         </S.MoviesList>
       </S.MoviesWrapper>

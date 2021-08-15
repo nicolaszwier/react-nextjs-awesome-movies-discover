@@ -4,22 +4,14 @@ export const Wrapper = styled.section`
   background-color: var(--background);
   color: #fff;
   text-align: center;
-  /* display: flex;
-  flex-direction: column; */
   width: 100%;
   margin: 0 auto;
-  /* position: sticky; */
-  /* top: 0; */
-  /* height: 100%; */
 `
 
 export const MoviesWrapper = styled.div`
   padding: 1rem;
   max-width: 1280px;
   margin: 0 auto;
-  /* display: flex;
-  flex-wrap: wrap;
-  list-style: none; */
 `
 
 export const MoviesListTitle = styled.h1`
@@ -30,7 +22,6 @@ export const MoviesListTitle = styled.h1`
 `
 
 export const MoviesList = styled.div`
-  /* padding: 0.3rem; */
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
@@ -74,16 +65,11 @@ export const MovieCardSubTitle = styled.h3`
 `
 
 export const MovieImageWrapper = styled.div`
-  max-width: 300px;
   overflow: hidden;
-  /* border-top-left-radius: 11px;
-  border-top-right-radius: 11px; */
   border-radius: 11px;
   box-shadow: 0px 1px 8px 2px rgb(0 0 0 / 7%);
   position: relative;
-  max-width: 100%;
   height: auto;
-  min-height: 330px;
 `
 
 export const VoteAverage = styled.div`
