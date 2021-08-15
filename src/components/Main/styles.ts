@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   background-color: var(--background);
@@ -12,6 +13,10 @@ export const Wrapper = styled.main`
 
 export const Content = styled.main`
   display: flex;
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `
 
 export const TopAppBar = styled.nav`
