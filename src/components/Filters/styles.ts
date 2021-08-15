@@ -4,19 +4,13 @@ export const Wrapper = styled.section`
   background-color: var(--background);
   color: #fff;
   text-align: center;
-  /* display: flex;
-  flex-direction: column; */
   width: 220px;
-  /* position: sticky; */
-  /* top: 0; */
-  /* height: 100%; */
 `
 
 export const FiltersGroupWrapper = styled.div`
   padding: 1rem 0.5rem;
-  /* display: flex;
-  flex-wrap: wrap;
-  list-style: none; */
+  position: sticky;
+  top: 0;
 `
 
 export const FiltersGroupTitle = styled.h1`
@@ -27,7 +21,6 @@ export const FiltersGroupTitle = styled.h1`
 `
 
 export const FiltersGroupContent = styled.div`
-  /* padding: 0.3rem; */
   display: flex;
   flex-wrap: wrap;
   list-style: none;
