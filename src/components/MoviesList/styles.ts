@@ -21,6 +21,14 @@ export const MoviesListTitle = styled.h1`
   margin: 0.5rem 0 1rem;
 `
 
+export const NotFoundText = styled.p`
+  font-weight: 600;
+  color: var(--textColorOnBackground);
+  text-align: center;
+  margin: 2rem;
+  opacity: 0.5;
+`
+
 export const MoviesList = styled.div`
   flex: 1;
   display: grid;
@@ -81,4 +89,10 @@ export const VoteAverage = styled.div`
   top: 10px;
   right: 10px;
   z-index: 2;
+`
+
+export const PaginationWrapper = styled.div`
+  color: var(--textColorOnBackground);
+  margin: 2rem 0.5rem;
+  font-weight: 500;
 `
