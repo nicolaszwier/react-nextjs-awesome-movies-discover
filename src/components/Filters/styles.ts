@@ -1,10 +1,15 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   background-color: var(--background);
   color: #fff;
   text-align: center;
-  width: 220px;
+  width: 250px;
+
+  ${media.lessThan('medium')`
+    width: auto;
+  `}
 `
 
 export const FiltersGroupWrapper = styled.div`
@@ -32,7 +37,7 @@ export const Chip = styled.div`
   color: var(--primary);
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 25%;
+  border-radius: 6px;
   margin: 0.2rem;
   list-style: none;
   display: flex;
@@ -46,5 +51,28 @@ export const Chip = styled.div`
   &.selected {
     background: var(--primaryLight);
     color: #fff;
+  }
+`
+
+export const ApplyFilterButton = styled.button`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+
+  :hover {
+    filter: brightness(0.9);
+  }
+
+  :active {
+    /* filter: brightness(0.7); */
+    transform: scale3d(0.98, 0.98, 0.98);
   }
 `

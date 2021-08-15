@@ -24,6 +24,36 @@ const GlobalStyles = createGlobalStyle`
     --border: rgba(0,0,0,0.10)
   }
 
+  /* pagination */
+  .pagination {
+
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  li {
+    padding: 0.2rem 0.5rem;
+    margin: 0 0.1rem;
+    cursor: pointer;
+    display: inline-block;
+    background: var(--backgroundContrast);
+    border-radius: 4px;
+    font-size: 1.1rem;
+
+    :hover {
+      filter: brightness(0.9);
+    }
+  }
+  .selected {
+  background: var(--primary);
+  color: white;
+}
+}
+
   
 `
 
