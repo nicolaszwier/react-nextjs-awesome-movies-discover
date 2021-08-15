@@ -2,20 +2,13 @@ import { render, screen } from '@testing-library/react'
 
 import Main from '.'
 
+jest.mock('components/Filters', () => () => 'Filters')
+jest.mock('components/MoviesList', () => () => 'MoviesList')
+
 describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main />)
-
-    expect(
-      screen.getByRole('heading', { name: /the movies/i })
-    ).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
-  it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
-
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
+    render(<Main />)
+    expect(screen.getByRole('navigation')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /movies/i })).toBeInTheDocument()
   })
 })

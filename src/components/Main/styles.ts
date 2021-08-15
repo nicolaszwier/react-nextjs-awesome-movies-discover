@@ -1,33 +1,46 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.main`
-  background-color: #06092b;
+  background-color: var(--background);
   color: #fff;
   width: 100%;
   height: 100%;
-  padding: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `
 
-export const Logo = styled.img`
-  width: 25rem;
-  margin-bottom: 2rem;
+export const Content = styled.main`
+  display: flex;
+`
+
+export const TopAppBar = styled.nav`
+  height: 60px;
+  width: 100%;
+  border-bottom: 4px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  /* position: fixed;
+  top: 0; */
+  background: rgb(255 255 255 / 96%);
+  z-index: 10;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    var(--primaryLight),
+    var(--primary)
+  );
 `
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
 `
 
 export const Description = styled.h2`
   font-size: 2rem;
   font-weight: 400;
-`
-
-export const Illustration = styled.img`
-  margin-top: 3rem;
-  width: min(30rem, 100%);
+  color: var(--textColorOnBackground);
 `

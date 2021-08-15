@@ -1,12 +1,16 @@
+import Filters from 'components/Filters'
+import MoviesList from 'components/MoviesList'
 import * as S from './styles'
 
-const Main = ({
-  title = 'The movies',
-  description = 'TypeScript, ReactJS, NextJS e Styled Components'
-}) => (
+const Main = () => (
   <S.Wrapper>
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
+    <S.TopAppBar>
+      <S.Title>Movies</S.Title>
+    </S.TopAppBar>
+    <S.Content>
+      <Filters />
+      <MoviesList />
+    </S.Content>
   </S.Wrapper>
 )
 
