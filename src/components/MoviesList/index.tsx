@@ -76,10 +76,13 @@ const MoviesList = () => {
     }
   }
 
-  const formatDate = (date: string) =>
-    new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(
+  const formatDate = (date: string) => {
+    if (!date) return 'Unknown date'
+
+    return new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(
       new Date(date)
     )
+  }
 
   const handlePageChange = (data: { selected: number }) => {
     const selectedPage = data.selected + 1
@@ -118,7 +121,7 @@ const MoviesList = () => {
                 </S.MovieImageWrapper>
                 <S.MovieCardTitle>{movie.title}</S.MovieCardTitle>
                 <S.MovieCardSubTitle>
-                  {formatDate(movie.release_date)}
+                  {formatDate(movie.release_date || '')}
                 </S.MovieCardSubTitle>
               </S.MovieCard>
             </Link>

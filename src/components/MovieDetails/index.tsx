@@ -9,14 +9,13 @@ export type Props = {
 }
 
 const MovieDetails = ({ movie }: Props) => {
-
   const formatDate = (date: string) => {
     if (!date) return 'Unknown date'
 
-    return  new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(
+    return new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(
       new Date(date)
     )
-  } 
+  }
 
   const buildGenresString = (genres: Genre[]) => {
     const genresArray: string[] = genres.map((el) => el.name)
