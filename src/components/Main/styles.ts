@@ -26,10 +26,10 @@ export const TopAppBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 1rem;
   /* position: fixed;
   top: 0; */
-  background: rgb(255 255 255 / 96%);
+  background: var(--backgroundContrast);
   z-index: 10;
   border-image-slice: 1;
   border-image-source: linear-gradient(
@@ -40,8 +40,12 @@ export const TopAppBar = styled.nav`
 `
 
 export const Title = styled.h1`
+  font-weight: 800;
   font-size: 1.5rem;
-  color: var(--primary);
+  /* color: var(--primary); */
+  background: -webkit-linear-gradient(var(--primaryLight), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
 
 export const Description = styled.h2`

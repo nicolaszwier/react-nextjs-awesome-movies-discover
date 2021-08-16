@@ -15,7 +15,7 @@ export const MoviesWrapper = styled.div`
 `
 
 export const MoviesListTitle = styled.h1`
-  font-weight: 700;
+  font-weight: 600;
   color: var(--textColorOnBackground);
   text-align: left;
   margin: 0.5rem 0 1rem;
@@ -67,7 +67,7 @@ export const MovieCardTitle = styled.h2`
 export const MovieCardSubTitle = styled.h3`
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-align: left;
   margin: 0 0.7rem 0.5rem;
 `

@@ -22,18 +22,13 @@ const MovieDetails = ({ movie }: Props) => {
   return (
     <S.Wrapper>
       <S.TopAppBar>
-        <S.Title>{movie.title}</S.Title>
+        <S.Title>Awesome Movies Discover</S.Title>
       </S.TopAppBar>
       <S.BackdropWrapper
         style={{
           backgroundImage: `url(${apiImageUrl}/w1920_and_h800_multi_faces/${movie.backdrop_path})`
         }}
       >
-        {/* <Image
-          src={`${apiImageUrl}/w1920_and_h800_multi_faces/${movie.backdrop_path}`}
-          height="800"
-          width="1920"
-        ></Image> */}
         <S.Content>
           <S.ContentRow>
             <S.MovieImageWrapper>

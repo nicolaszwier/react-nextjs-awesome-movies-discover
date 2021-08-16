@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   background-color: var(--background);
@@ -8,28 +9,27 @@ export const Wrapper = styled.section`
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  /* position: sticky; */
-  /* top: 0; */
   height: 100%;
 `
 
 export const BackdropWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  /* filter: blur(8px); */
-  /* -webkit-filter: blur(8px); */
+  background-repeat: no-repeat;
+  background-color: rgb(0 0 0 / 85%);
 `
 
 export const Content = styled.section`
-  /* border-top-left-radius: 50px;
-  border-top-right-radius: 50px; */
-  /* transform: translateY(-50%); */
-  background-color: rgb(255 255 255 / 85%);
+  background-color: rgb(53 53 53 / 85%);
   min-height: 300px;
+  height: 100vh;
   width: 100%;
-  /* box-shadow: 0px -15px 31px 4px #00000024; */
   flex: 1;
   padding: 2rem 0;
+
+  ${media.lessThan('medium')`
+    padding: 1rem 0;
+  `}
 `
 
 export const TopAppBar = styled.nav`
@@ -39,10 +39,10 @@ export const TopAppBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 1rem;
   position: sticky;
   top: 0;
-  background: rgb(255 255 255 / 96%);
+  background: var(--backgroundContrast);
   z-index: 10;
   border-image-slice: 1;
   border-image-source: linear-gradient(
@@ -57,33 +57,37 @@ export const Title = styled.h1`
   color: var(--primary);
 `
 
-export const MovieTitle = styled.h1`
+export const MovieTitle = styled.h2`
   font-weight: 800;
   font-size: 1.7rem;
   color: var(--textColorOnBackground);
   text-align: left;
-  margin: 1.5rem 0.5rem 0.5rem;
+  margin: 1.5rem 1rem 0.5rem;
 `
 
-export const Subtitle = styled.h2`
+export const Subtitle = styled.h3`
   font-weight: 400;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-align: left;
-  margin: 0 0.5rem 1rem;
+  margin: 0 1rem 1rem;
 `
 
 export const Overview = styled.p`
   font-weight: 400;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-align: left;
-  margin: 0 0.5rem 1rem;
+  margin: 0 1rem 1rem;
 `
 
 export const ContentRow = styled.article`
   display: flex;
   justify-content: space-between;
+
+  ${media.lessThan('medium')`
+    flex-direction: column-reverse;
+  `}
 `
 
 export const RowBlock = styled.div`
@@ -97,7 +101,9 @@ export const MovieImageWrapper = styled.div`
   box-shadow: 0px 1px 8px 2px rgb(0 0 0 / 7%);
   height: auto;
   margin: 1rem 1rem 1rem 3rem;
-  /* transform: translateY(-30%); */
+  ${media.lessThan('medium')`
+  margin: 1rem;
+  `}
 `
 
 export const VoteAverage = styled.div`

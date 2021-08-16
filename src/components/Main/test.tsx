@@ -9,6 +9,8 @@ describe('<Main />', () => {
   it('should render the heading', () => {
     render(<Main />)
     expect(screen.getByRole('navigation')).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /movies/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Awesome Movies Discover/i })
+    ).toBeInTheDocument()
   })
 })

@@ -67,9 +67,9 @@ const MoviesList = () => {
       if (!res.ok) throw new Error('Error while loading movies')
 
       const data = await res.json()
-      setLoading(false)
       setMovies(data.results)
       setTotalPages(data.total_pages)
+      setLoading(false)
     } catch (error) {
       setLoading(false)
       console.log(error)
