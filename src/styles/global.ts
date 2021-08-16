@@ -14,14 +14,25 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    --background: rgb(255, 255, 255);
+    --background: #212121;
+    --backgroundContrast: #353535;
+    --primary: #F0386B;
+    /* --primary: #5E1AB7; */
+    --primaryLight: #ff728f;
+    /* --primaryLight: #8758C4; */
+    --secondary: #ECC500;
+    --textColorOnBackground: rgba(255,255,255,0.85);
+    --secondaryTextColor: rgba(255,255,255,0.7);
+    --border: rgba(0,0,0,0.10)
+
+    /* --background: rgb(255, 255, 255);
     --backgroundContrast: #F9F9F9;
     --primary: #5E1AB7;
     --primaryLight: #8758C4;
     --secondary: #ECC500;
     --textColorOnBackground: rgba(0, 0, 0, 0.85);
     --secondaryTextColor: rgba(0,0,0,0.65);
-    --border: rgba(0,0,0,0.10)
+    --border: rgba(0,0,0,0.10) */
   }
 
   /* pagination */

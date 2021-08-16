@@ -5,7 +5,7 @@ import * as S from './styles'
 const Main = () => (
   <S.Wrapper>
     <S.TopAppBar>
-      <S.Title>Movies</S.Title>
+      <S.Title>Awesome Movies Discover</S.Title>
     </S.TopAppBar>
     <S.Content>
       <Filters />

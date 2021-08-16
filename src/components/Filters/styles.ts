@@ -19,22 +19,22 @@ export const FiltersGroupWrapper = styled.div`
 `
 
 export const FiltersGroupTitle = styled.h1`
-  font-weight: 700;
+  font-weight: 600;
   color: var(--textColorOnBackground);
   text-align: left;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.5rem;
 `
 
-export const FiltersGroupContent = styled.div`
+export const FiltersGroupContent = styled.ul`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 `
 
-export const Chip = styled.div`
+export const Chip = styled.li`
   padding: 0.25rem 0.6rem;
   background: var(--backgroundContrast);
-  color: var(--primary);
+  color: #ffd5e0;
   font-weight: 500;
   font-size: 0.9rem;
   border-radius: 6px;
@@ -45,7 +45,8 @@ export const Chip = styled.div`
   user-select: none;
 
   :hover {
-    background: #8758c480;
+    /* background: #8758c480; */
+    filter: contrast(0.7);
   }
 
   &.selected {

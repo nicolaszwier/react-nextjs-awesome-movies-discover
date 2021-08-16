@@ -83,17 +83,18 @@ const Filters = () => {
       <S.FiltersGroupWrapper>
         <S.FiltersGroupTitle>Genres</S.FiltersGroupTitle>
         <S.FiltersGroupContent>
-          {genres.map((genre: Genre) => (
-            <S.Chip
-              className={isGenreSelected(genre.id) ? 'selected' : ''}
-              onClick={() => {
-                toggleGenre(genre.id)
-              }}
-              key={genre.id}
-            >
-              {genre.name}
-            </S.Chip>
-          ))}
+          {genres.length > 0 &&
+            genres.map((genre: Genre) => (
+              <S.Chip
+                className={isGenreSelected(genre.id) ? 'selected' : ''}
+                onClick={() => {
+                  toggleGenre(genre.id)
+                }}
+                key={genre.id}
+              >
+                {genre.name}
+              </S.Chip>
+            ))}
         </S.FiltersGroupContent>
         <S.ApplyFilterButton onClick={applyFilter}>
           Apply filter
