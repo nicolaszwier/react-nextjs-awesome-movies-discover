@@ -9,6 +9,7 @@ export type Props = {
 }
 
 const MovieDetails = ({ movie }: Props) => {
+
   const formatDate = (date: string) => {
     if (!date) return 'Unknown date'
 
@@ -45,8 +46,8 @@ const MovieDetails = ({ movie }: Props) => {
               <S.MovieTitle>{movie.title}</S.MovieTitle>
               <S.Subtitle>
                 {' '}
-                {formatDate(movie.release_date)} -{' '}
-                {buildGenresString(movie.genres || [])}{' '}
+                {formatDate(movie?.release_date || '')} -{' '}
+                {buildGenresString(movie?.genres || [])}{' '}
               </S.Subtitle>
               <S.Overview>{movie.overview}</S.Overview>
             </S.RowBlock>
