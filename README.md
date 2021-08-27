@@ -1,3 +1,7 @@
+## The project
+
+This is a website to discover movies made with React and NextJS to studying purposes. The app fetch the movies in The Movie Database API v3. [TMBD API](https://developers.themoviedb.org/3)
+
 ## This app is available in:
 
 https://the-movies-kappa.vercel.app/
